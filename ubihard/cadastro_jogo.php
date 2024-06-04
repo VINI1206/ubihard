@@ -5,6 +5,7 @@
     $valor = $_POST["valor"];
     $desenvolvedora = $_POST["desenvolvedora"];
     $distribuidora = $_POST["distribuidora"];
+    $data_lancamento = $_POST["data_lancamento"];
     $link_imagem = $_POST["link_imagem"];
 
     foreach ($_POST as $item) {
@@ -16,7 +17,7 @@
 
     include_once("conexao.php");
 
-    $comando = "INSERT INTO jogos (nome, descricao, valor, desenvolvedora, distribuidora, link_imagem) VALUES ('$nome','$descricao',$valor,'$desenvolvedora','$distribuidora','$link_imagem')";
+    $comando = "INSERT INTO jogos (nome, descricao, valor, desenvolvedora, distribuidora, lancamento, link_imagem) VALUES ('$nome','$descricao',$valor,'$desenvolvedora','$distribuidora','$data_lancamento','$link_imagem')";
 
     if (mysqli_query($conexao, $comando)) {
         echo "Jogo cadastrado com sucesso.";
