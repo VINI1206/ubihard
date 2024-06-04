@@ -81,6 +81,7 @@ CREATE TABLE `jogos` (
   `valor` decimal(10,2) NOT NULL,
   `desenvolvedora` varchar(50) NOT NULL,
   `distribuidora` varchar(50) NOT NULL,
+  `lancamento` date NOT NULL,
   `link_imagem` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -88,12 +89,12 @@ CREATE TABLE `jogos` (
 -- Despejando dados para a tabela `jogos`
 --
 
-INSERT INTO `jogos` (`id_jogo`, `nome`, `descricao`, `valor`, `desenvolvedora`, `distribuidora`, `link_imagem`) VALUES
-(1, 'Steamworld Dig', 'SteamWorld Dig é uma aventura de mineração em plataforma com fortes influências Metroidvanianas. Controle Rusty, um robô minerador à vapor solitário, que chega numa velha cidade mineradora em apuros. Escave o velho solo e adquira riquezas enquanto desvenda a ameaça ancestral que espreita as profundezas...', 20.69, 'Form Games', 'Form Games', 'https://cdn.akamai.steamstatic.com/steam/apps/252410/header.jpg?t=1713431694'),
-(2, 'Steamworld Dig 2', 'SteamWorld Dig voltou! Escave fundo, encontre tesouros e desenterre horrores do submundo nesta aventura de mineração em plataformas inspirada nos jogos clássicos do estilo Metroidvania.', 37.99, 'Image & Form Games', 'Image & Form Games', 'https://cdn.akamai.steamstatic.com/steam/apps/571310/header.jpg?t=1713431741'),
-(3, 'Steamworld Heist', 'Em SteamWorld Heist, você lidera um esquadrão de robôs numa série de tiroteios táticos e épicos. É estratégia por turno com um extra: Mirar manualmente as armas da tripulação, permitindo tiros insanos e ricochetes de balas!', 28.99, 'Image & Form Games', 'Image & Form Games', 'https://cdn.akamai.steamstatic.com/steam/apps/322190/header.jpg?t=1713431767'),
-(4, 'SteamWorld Quest: Hand of Gilgamech', 'Lead a party of aspiring heroes through a beautifully hand-drawn world and intense battles using only your wits and a handful of cards. Take on whatever threat comes your way by crafting your own deck choosing from over 100 unique punch-cards!', 47.49, 'Image & Form Games', 'Thunderful Publishing', 'https://cdn.akamai.steamstatic.com/steam/apps/804010/header.jpg?t=1713431801'),
-(5, 'SteamWorld Build', 'Cave o caminho para uma nova fronteira enquanto o planeta morre ao seu redor! Vá fundo e construa sem parar para encontrar a tecnologia espacial perdida, ao mesmo tempo que garante água, combustível e conforto para todos! Você tem o que é preciso para alcançar a fronteira final?', 73.99, 'The Station', 'Thunderful Publishing', 'https://cdn.akamai.steamstatic.com/steam/apps/2134770/header.jpg?t=1713431762');
+INSERT INTO `jogos` (`id_jogo`, `nome`, `descricao`, `valor`, `desenvolvedora`, `distribuidora`, `lancamento`, `link_imagem`) VALUES
+(1, 'Steamworld Dig', 'SteamWorld Dig é uma aventura de mineração em plataforma com fortes influências Metroidvanianas. Controle Rusty, um robô minerador à vapor solitário, que chega numa velha cidade mineradora em apuros. Escave o velho solo e adquira riquezas enquanto desvenda a ameaça ancestral que espreita as profundezas...', 20.69, 'Form Games', 'Form Games', '2013-12-05', 'https://cdn.akamai.steamstatic.com/steam/apps/252410/header.jpg?t=1713431694'),
+(2, 'Steamworld Dig 2', 'SteamWorld Dig voltou! Escave fundo, encontre tesouros e desenterre horrores do submundo nesta aventura de mineração em plataformas inspirada nos jogos clássicos do estilo Metroidvania.', 37.99, 'Image & Form Games', 'Image & Form Games', '2017-09-22', 'https://cdn.akamai.steamstatic.com/steam/apps/571310/header.jpg?t=1713431741'),
+(3, 'Steamworld Heist', 'Em SteamWorld Heist, você lidera um esquadrão de robôs numa série de tiroteios táticos e épicos. É estratégia por turno com um extra: Mirar manualmente as armas da tripulação, permitindo tiros insanos e ricochetes de balas!', 28.99, 'Image & Form Games', 'Image & Form Games', '2016-06-07', 'https://cdn.akamai.steamstatic.com/steam/apps/322190/header.jpg?t=1713431767'),
+(4, 'SteamWorld Quest: Hand of Gilgamech', 'Lead a party of aspiring heroes through a beautifully hand-drawn world and intense battles using only your wits and a handful of cards. Take on whatever threat comes your way by crafting your own deck choosing from over 100 unique punch-cards!', 47.49, 'Image & Form Games', 'Thunderful Publishing', '2019-05-31', 'https://cdn.akamai.steamstatic.com/steam/apps/804010/header.jpg?t=1713431801'),
+(5, 'SteamWorld Build', 'Cave o caminho para uma nova fronteira enquanto o planeta morre ao seu redor! Vá fundo e construa sem parar para encontrar a tecnologia espacial perdida, ao mesmo tempo que garante água, combustível e conforto para todos! Você tem o que é preciso para alcançar a fronteira final?', 73.99, 'The Station', 'Thunderful Publishing', '2023-12-01', 'https://cdn.akamai.steamstatic.com/steam/apps/2134770/header.jpg?t=1713431762');
 
 -- --------------------------------------------------------
 
