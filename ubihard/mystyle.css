@@ -31,11 +31,11 @@ a:hover {
     max-width: 1200px;
 }
 .cadastro-container form {
-    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente /
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 200px; / Largura do formulário /
-    max-width: 90%; / Para manter a responsividade /
-    color: #000; / Cor do texto */
+    width: 200px;
+    max-width: 90%;
+    color: #000;
 }
