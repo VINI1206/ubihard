@@ -6,7 +6,6 @@ style.css
   box-sizing: border-box;
 }
 
-/* Estilos Globais /
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -34,7 +33,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/ Estilos para Containers */
 .container {
     width: 80%;
     margin: 0 auto;
