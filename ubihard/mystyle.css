@@ -32,6 +32,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: flex;
 }
 .cadastro-container form {
     background: rgba(255, 255, 255, 0.8);
@@ -41,5 +42,4 @@ a:hover {
     width: 200px;
     max-width: 90%;
     color: #000;
-    display: flex;
 }
