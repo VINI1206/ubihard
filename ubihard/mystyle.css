@@ -1,0 +1,41 @@
+/* Reset CSS */
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globais /
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #012db4;
+    color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/ Estilos para Links /
+a {
+    color: #00a2ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 255, 255);
+    text-decoration: underline;
+}
+
+/ Estilos para Containers */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
