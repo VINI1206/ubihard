@@ -7,24 +7,26 @@
         <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
     <body>
-        <form name="cadastro" action="cadastro.php" method="post" autocomplete="on">
-            <label for="usuario">Usuário:</label>
-            <input type="text" id="usuario" name="usuario" maxlength="32" required autofocus><br><br>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" maxlength="255" required><br><br>
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" maxlength="32" required autocomplete="off"><br><br>
-            
-            <label for="senha_dois">Confira a senha:</label>
-            <input type="password" id="senha_dois" name="senha_dois" maxlength="32" required autocomplete="off"><br><br>
-
-            <label for="data_nascimento">Data de nascimento:</label>
-            <input type="date" id="data_nascimento" name="data_nascimento" min="1900-01-01" max="2007-12-31" required><br><br>
-
-            <input type="submit" value="Enviar"/>
-            <input type="reset" name="botao" value="Limpar"/>
-        </form>
+        <div class="cadastro-container">
+            <form name="cadastro" action="cadastro.php" method="post" autocomplete="on">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" maxlength="32" required autofocus><br><br>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" maxlength="255" required><br><br>
+    
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" maxlength="32" required autocomplete="off"><br><br>
+                
+                <label for="senha_dois">Confira a senha:</label>
+                <input type="password" id="senha_dois" name="senha_dois" maxlength="32" required autocomplete="off"><br><br>
+    
+                <label for="data_nascimento">Data de nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" min="1900-01-01" max="2007-12-31" required><br><br>
+    
+                <input type="submit" value="Enviar"/>
+                <input type="reset" name="botao" value="Limpar"/>
+            </form>
+        </div>
     </body>
 </html>
