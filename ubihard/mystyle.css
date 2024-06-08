@@ -28,7 +28,6 @@ a:hover {
     width: 80%;
     margin: 0 auto;
     max-width: 1200px;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
