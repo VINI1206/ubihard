@@ -24,10 +24,14 @@ a:hover {
     text-decoration: underline;
 }
 
-.container {
+.cadastro-container {
     width: 80%;
     margin: 0 auto;
     max-width: 1200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .cadastro-container form {
     background: rgba(255, 255, 255, 0.8);
@@ -38,8 +42,4 @@ a:hover {
     max-width: 90%;
     color: #000;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
