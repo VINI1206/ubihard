@@ -15,12 +15,6 @@
 
     include_once("conexao.php");
 
-    $select = "SELECT * FROM jogos WHERE id_jogo = $id_jogo;";
-
-    $jogo = mysqli_query($conexao, $select);
-
-    $jogo = mysqli_fetch_array($jogo);
-
     $comando = "UPDATE jogos SET nome = '$nome', descricao = '$descricao', valor = $valor, desenvolvedora = '$desenvolvedora', distribuidora = '$distribuidora', lancamento = '$lancamento', link_imagem = '$link_imagem' WHERE id_jogo = $id_jogo;";
     
     if (mysqli_query($conexao, $comando)) {
