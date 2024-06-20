@@ -8,7 +8,7 @@
     
     include_once("conexao.php");
 
-    $comando = "DELETE FROM jogos WHERE id_jogo = $id_jogo";
+    $comando = "DELETE FROM jogos WHERE id_jogo = $id_jogo;";
 
     if (mysqli_query($conexao, $comando)) {
         mysqli_close($conexao);

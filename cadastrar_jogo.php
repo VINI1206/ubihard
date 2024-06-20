@@ -22,6 +22,9 @@
             
             <label for="valor">Valor do jogo:</label>
             <input type="number" id="valor" name="valor" min=0 step=0.01 required><br><br>
+
+            <label for="plataforma">Plataformas:</label>
+            <input type="text" id="plataforma" name="plataforma" maxlength="200" required><br><br>
             
             <label for="desenvolvedora">Desenvolvedora do jogo:</label>
             <input type="text" id="desenvolvedora" name="desenvolvedora" maxlength="50" required><br><br>
@@ -38,5 +41,6 @@
             <input type="submit" value="Enviar"/>
             <input type="reset" name="botao" value="Limpar"/>
         </form>
+        <a href="index_admin.php">Voltar</a>
     </body>
 </html>

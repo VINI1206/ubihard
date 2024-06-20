@@ -20,6 +20,7 @@
                 <th>Nome</th>
                 <th>Descrição</th>
                 <th>Valor</th>
+                <th>Plataformas</th>
                 <th>Desenvolvedora</th>
                 <th>Distribuidora</th>
                 <th>lançamento</th>
@@ -42,7 +43,8 @@
                     echo "<td>$resultado[4]</td>";
                     echo "<td>$resultado[5]</td>";
                     echo "<td>$resultado[6]</td>";
-                    echo "<td><img src='$resultado[7]'></td>";
+                    echo "<td>$resultado[7]</td>";
+                    echo "<td><img src='$resultado[8]'></td>";
                     echo "</tr>";
                 }
 
@@ -63,6 +65,9 @@
                 <label for="valor">Valor do jogo:</label>
                 <input type="number" id="valor" name="valor" min=0 step=0.01 required><br><br>
                 
+                <label for="plataforma">Plataformas:</label>
+                <input type="text" id="plataforma" name="plataforma" maxlength="200" required><br><br>
+
                 <label for="desenvolvedora">Desenvolvedora do jogo:</label>
                 <input type="text" id="desenvolvedora" name="desenvolvedora" maxlength="50" required><br><br>
                 
@@ -78,5 +83,6 @@
                 <input type="submit" value="Enviar"/>
             </form>
         </div>
+        <a href="index_admin.php">Voltar</a>
     </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trocar a senha</title>
+        <link rel="stylesheet" href="mystyle.css">
+        <link rel="icon" type="image/x-icon" href="ubihard_icon.png">
+    </head>
+    <body>
+        <h3>Insira as informações da conta para trocar a senha:</h3>
+        <form action="trocar_senha.php" name="form_troca_senha" method="POST">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" maxlength="32" required autofocus><br>
+                            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" maxlength="255" required><br>
+
+            <label for="data_nascimento">Data de nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" min="1900-01-01" max="2007-12-31" required><br>
+
+            <input type="submit" value="Enviar"/>
+            <input type="reset" name="botao" value="Limpar"/>
+        </form>
+    </body>
+</html>

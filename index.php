@@ -4,8 +4,6 @@
         $_SESSION = array();
         session_destroy();
     }
-    
-    include_once('conexao.php');
 
     if (isset($_POST['usuario']) || isset($_POST['senha'])) {
     
@@ -16,12 +14,19 @@
         } else {
             $nome = $_POST['usuario'];
             $senha = md5($_POST['senha']);
+            
+            include_once('conexao.php');        
     
             $comando = "SELECT * FROM usuarios WHERE nome = '$nome' AND senha = '$senha';";
             
             $resultado = mysqli_query($conexao, $comando);
 
             $usuario = mysqli_fetch_array($resultado);
+
+            if (!$usuario) {
+                header("Location: usuario_nao_encontrado.html");
+                exit;
+            }
 
             if (!isset($_SESSION)) {
                 session_start();
@@ -31,12 +36,16 @@
 
                 if ($_SESSION['id'] == 4) {
                     header("Location: index_admin.php");
+                    exit;
                 } else {
                     header("Location: index_usuario.php");
+                    exit;
                 }
             }
+            
+            mysqli_close($conexao);
         }
-    }    
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -60,6 +69,8 @@
                 <input class="botao" type="submit" value="Enviar"/>
                 <p></p>
                 <input class="botao" type="reset" name="botao" value="Limpar"/>
+                <p></p>
+                <a class="botao" id="botao_esqueci_senha" href="trocar_senha.html">Esqueci a senha</a>
                 <p></p>
                 <a class="botao" id="botao_cadastro" href="cadastro.html">Cadastre-se</a>
             </form>
@@ -123,12 +134,14 @@
                 background-color: #4c8f50;
             }
 
-            #botao_cadastro {
+            #botao_cadastro,
+            #botao_esqueci_senha {
                 text-decoration: none;
                 background-color: #015f50;
             }
 
-            #botao_cadastro:hover {
+            #botao_cadastro:hover,
+            #botao_esqueci_senha:hover {
                 background-color: #015f70;
                 color: #ffffff;
             }
