@@ -11,6 +11,7 @@
         <title>Pesquisa</title>
     </head>
     <body>
+        <h1>Bem vindo <?php echo $_SESSION["nome"]; ?>!</h1>
         <form name="pesquisa_jogo" action="pesquisar.php" method="post">
             <label for="pesquisa">Pesquisar:</label>
             <input type="text" id="pesquisa" name="pesquisa" required>

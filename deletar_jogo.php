@@ -40,6 +40,7 @@
             <label for="id_jogo">Id do jogo:</label>
             <input type="number" id="id_jogo" name="id_jogo" min=0 required>
             <input type="submit" value="Enviar"/>
-        </form>
+        </form><br>
+        <a href="index_admin.php">Voltar</a>
     </body>
 </html>

@@ -6,15 +6,17 @@
     $distribuidora = $_POST["distribuidora"];
     $data_lancamento = $_POST["data_lancamento"];
     $link_imagem = $_POST["link_imagem"];
+    $plataforma = $_POST["plataforma"];
 
-    if (!$nome OR !$descricao OR !$valor OR !$desenvolvedora OR !$distribuidora OR !$data_lancamento OR !$link_imagem) {
-        header("Location: cadastro_jogo.html");
+    if (!$nome OR !$descricao OR !$valor OR !$plataforma OR !$desenvolvedora OR !$distribuidora OR !$data_lancamento OR !$link_imagem) {
+        header("Location: cadastrar_jogo.php");
         exit;
     };
 
     include_once("conexao.php");
 
-    $comando = "INSERT INTO jogos (nome, descricao, valor, desenvolvedora, distribuidora, lancamento, link_imagem) VALUES ('$nome','$descricao',$valor,'$desenvolvedora','$distribuidora','$data_lancamento','$link_imagem')";
+    $comando = "INSERT INTO jogos (nome, descricao, valor, plataformas, desenvolvedora, distribuidora, lancamento, link_imagem)" .
+    " VALUES ('$nome','$descricao',$valor,'$plataforma','$desenvolvedora','$distribuidora','$data_lancamento','$link_imagem')";
 
     if (mysqli_query($conexao, $comando)) {
         echo "Jogo cadastrado com sucesso.";
@@ -23,4 +25,6 @@
     }
 
     mysqli_close($conexao);
+    header("Location: cadastrar_jogo.php");
+    exit;
 ?>

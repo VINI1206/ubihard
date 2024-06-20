@@ -5,11 +5,9 @@
     $senha_dois = md5($_POST["senha_dois"]);
     $data_nascimento = $_POST["data_nascimento"];
 
-    foreach ($_POST as $item) {
-        if (!$item) {
-            header("Location: cadastro.html");
-            exit;
-        };
+    if (!$usuario OR !$email OR !$senha OR !$senha_dois OR !$data_nascimento) {
+        header("Location: cadastro.html");
+        exit;
     };
 
     if ($senha != $senha_dois) {
@@ -19,7 +17,7 @@
 
     include_once("conexao.php");
 
-    $comando = "INSERT INTO usuarios (email, nome, senha, data_nascimento) VALUES ('$email','$usuario','$senha','$data_nascimento')";
+    $comando = "INSERT INTO usuarios (email, nome, senha, data_nascimento) VALUES ('$email','$usuario','$senha','$data_nascimento');";
 
     if (mysqli_query($conexao, $comando)) {
         echo "Usuário cadastrado com sucesso.";

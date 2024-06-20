@@ -12,6 +12,7 @@
         <link rel="icon" type="image/x-icon" href="ubihard_icon.png">
     </head>
     <body>
+        <h1>Bem vindo administrador!</h1>
         <a href="cadastrar_jogo.php">Cadastrar jogo</a><br>
         <a href="atualizar_jogo.php">Atualizar dados de um jogo</a><br>
         <a href="deletar_jogo.php">Deletar jogo</a>
